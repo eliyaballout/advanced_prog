@@ -50,12 +50,17 @@ void addto_against_me(PokemonType* A, PokemonType* B);
 
 void addto_against_others(PokemonType* A, PokemonType* B);
 
-status deletefrom_against_me(PokemonType* A, PokemonType* B);
+status deletefrom_against_me(PokemonType* A, char* typename);
 
+status deletefrom_against_others(PokemonType* A, char* typename);
 
+status print_Pokemon(Pokemon* pokemon);
 
+status print_Type(PokemonType* type);
 
+PokemonType* searchType(PokemonType** allTypes, char* typeName, int numOfTypes);
 
+void freePokemon(Pokemon* tmp);
 
 void freeType(PokemonType* tmp);
 
