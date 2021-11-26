@@ -134,8 +134,7 @@ status print_Pokemon(Pokemon* pokemon){
 	if (pokemon == NULL)
 		return failure;
 
-	printf("%s :\n%s, %s Type.\nHeight: %.2f m    Weight: %.2f kg    Attack: %d\n\n",
-			pokemon->pokName, pokemon->species, pokemon->type->typeName, pokemon->info->height, pokemon->info->weight, pokemon->info->attack);
+	printf("%s :\n%s, %s Type.\nHeight: %.2f m    Weight: %.2f kg    Attack: %d\n\n", pokemon->pokName, pokemon->species, pokemon->type->typeName, pokemon->info->height, pokemon->info->weight, pokemon->info->attack);
 
 	return success;
 }
@@ -184,7 +183,7 @@ PokemonType* searchType(PokemonType** allTypes, char* typeName, int numOfTypes){
 		if (allTypes[i] == NULL)
 			return NULL;
 
-		if (strcmp(allTypes[i], typeName) == 0)
+		if (strcmp(allTypes[i]->typeName, typeName) == 0)
 			return allTypes[i];
 	}
 
